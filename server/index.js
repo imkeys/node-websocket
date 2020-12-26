@@ -12,8 +12,14 @@ wss.on('connection', connection = (ws) => {
 			client.send('do you love me?')
 		})
 	})
+
+	setInterval(() => {
+		ws.send('1111')
+		console.log(111)
+	}, 1000 * 600)
 })
 
 server.listen(10000, listening => {
 	console.log('服务器启动成功')
 })
+

@@ -1,0 +1,86 @@
+{
+  "id": "2294580",
+  "name": "临时",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "19054872",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "19054860",
+      "name": "最小化",
+      "font_class": "zuixiaohua",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "19054861",
+      "name": "最大化 (1)",
+      "font_class": "zuidahua",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "19054862",
+      "name": "关闭 (1)",
+      "font_class": "guanbi",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "19054863",
+      "name": "代码",
+      "font_class": "daima",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "19054864",
+      "name": "时间",
+      "font_class": "shijian",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "19054865",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "19054866",
+      "name": "文件夹 (1)",
+      "font_class": "wenjianjia",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "19054867",
+      "name": "视频",
+      "font_class": "shipin",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "19054868",
+      "name": "音乐",
+      "font_class": "yinle",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "19054869",
+      "name": "表情",
+      "font_class": "biaoqing",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    }
+  ]
+}
