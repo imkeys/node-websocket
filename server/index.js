@@ -1,25 +1,34 @@
-var express = require('express')
-var http = require('http')
-var WebSocket = require('ws')
-var app = express()
-var server = http.createServer(app)
-var wss = new WebSocket.Server({ server })
+const app = require('express')()
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
 
-wss.on('connection', connection = (ws) => {
-	console.log('连接成功')
-	ws.on('message', incoming = (data) => {
-		wss.clients.forEach(each = (client) => {
-			client.send('do you love me?')
-		})
-	})
-
-	setInterval(() => {
-		ws.send('1111')
-		console.log(111)
-	}, 1000 * 600)
+app.get('/', function (req, res) {
+	res.sendFile(__dirname + '/public/index.html')
 })
 
-server.listen(10000, listening => {
+// 服务
+io.on('connection', connection = (ws) => {
+	// 连接
+	console.log('连接成功['+ new Date()+ ']')
+	// 加入
+	ws.on('login', (data) => {
+		console.log(data.userName + '已登录')
+		// 向所有客户端广播用户加入
+		io.emit('login', data)
+	})
+	// 退出
+	ws.on('logout', (data) => {
+		// 向所有客户端广播用户退出
+		io.emit('logout', data)
+	})
+	// 消息
+	ws.on('message', (data) => {
+		// 向所有客户端广播发布的消息
+		io.emit('message', data)
+	})
+})
+
+// 创建服务
+server.listen(10000, () => {
 	console.log('服务器启动成功')
 })
-

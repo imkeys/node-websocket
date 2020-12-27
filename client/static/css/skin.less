@@ -3,16 +3,17 @@
  ****************/
 .layer-chat {
   position: fixed;
-  left: 100px;
-  top: 100px;
+  left: 20px;
+  top: 20px;
   width: 600px;
   border-radius: 5px;
-  background: #ffffff;
+  background: url(../image/bj.png) center center no-repeat #ffffff;
+  background-size: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   .thead {
     position: relative;
     height: 60px;
-    background: #f5f5f5;
+    background: fade(#dddddd, 90%);
     .pointer {
       cursor: move;
       padding: 10px 15px;
@@ -66,11 +67,16 @@
   .tbody {
     position: relative;
     height: 400px;
+    padding: 15px;
+    overflow: hidden;
+    overflow-y: auto;
+    background: fade(#ffffff, 90%);
   }
   .tfoot {
     position: relative;
     padding: 0 15px 10px;
     border-top: 1px solid #dddddd;
+    background: fade(#ffffff, 90%);
     .tool {
       height: 40px;
       .t1 {
@@ -113,6 +119,93 @@
         color: #ffffff;
         &:hover {
           box-shadow: 0 0 100px rgba(0, 0, 0, .1) inset;
+        }
+      }
+    }
+  }
+  .list {
+    .item {
+      position: relative;
+      margin: 0 0 10px;
+      &.me {
+        text-align: right;
+        .inf {
+          padding: 0 60px 0 0;
+        }
+        .avatar {
+          left: auto;
+          right: 0;
+        }
+        .name {
+          span {
+            float: right;
+          }
+        }
+        .text {
+          background: #5fb878;
+          color: #ffffff;
+          &::before {
+            left: auto;
+            right: -10px;
+            border-top-color: #5fb878;
+          }
+        }
+      }
+    }
+    .inf {
+      display: inline-block;
+      max-width: 100%;
+      padding: 0 0 0 60px;
+    }
+    .avatar {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      img {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+    .name {
+      position: relative;
+      line-height: 30px;
+      overflow: hidden;
+      span {
+        float: left;
+        margin: 0 5px;
+        color: #999999;
+        font-size: small;
+      }
+    }
+    .text {
+      position: relative;
+      display: inline-block;
+      padding: 10px;
+      background: #e5e5e5;
+      border-radius: 3px;
+      text-align: left;
+      &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: #e5e5e5;
+        position: absolute;
+        left: -10px;
+        top: 10px;
+      }
+      .txt {
+        p {
+          line-height: 1.5;
+          word-break: break-all;
+        }
+      }
+      .img {
+        img {
+          display: block;
+          max-width: 20%;
         }
       }
     }

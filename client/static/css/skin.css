@@ -3,17 +3,18 @@
  ****************/
 .layer-chat {
   position: fixed;
-  left: 100px;
-  top: 100px;
+  left: 20px;
+  top: 20px;
   width: 600px;
   border-radius: 5px;
-  background: #ffffff;
+  background: url(../image/bj.png) center center no-repeat #ffffff;
+  background-size: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .layer-chat .thead {
   position: relative;
   height: 60px;
-  background: #f5f5f5;
+  background: rgba(221, 221, 221, 0.9);
 }
 .layer-chat .thead .pointer {
   cursor: move;
@@ -67,11 +68,16 @@
 .layer-chat .tbody {
   position: relative;
   height: 400px;
+  padding: 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.9);
 }
 .layer-chat .tfoot {
   position: relative;
   padding: 0 15px 10px;
   border-top: 1px solid #dddddd;
+  background: rgba(255, 255, 255, 0.9);
 }
 .layer-chat .tfoot .tool {
   height: 40px;
@@ -115,4 +121,83 @@
 }
 .layer-chat .tfoot .button button:hover {
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.1) inset;
+}
+.layer-chat .list .item {
+  position: relative;
+  margin: 0 0 10px;
+}
+.layer-chat .list .item.me {
+  text-align: right;
+}
+.layer-chat .list .item.me .inf {
+  padding: 0 60px 0 0;
+}
+.layer-chat .list .item.me .avatar {
+  left: auto;
+  right: 0;
+}
+.layer-chat .list .item.me .name span {
+  float: right;
+}
+.layer-chat .list .item.me .text {
+  background: #5fb878;
+  color: #ffffff;
+}
+.layer-chat .list .item.me .text::before {
+  left: auto;
+  right: -10px;
+  border-top-color: #5fb878;
+}
+.layer-chat .list .inf {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0 0 0 60px;
+}
+.layer-chat .list .avatar {
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.layer-chat .list .avatar img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.layer-chat .list .name {
+  position: relative;
+  line-height: 30px;
+  overflow: hidden;
+}
+.layer-chat .list .name span {
+  float: left;
+  margin: 0 5px;
+  color: #999999;
+  font-size: small;
+}
+.layer-chat .list .text {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  background: #e5e5e5;
+  border-radius: 3px;
+  text-align: left;
+}
+.layer-chat .list .text::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #e5e5e5;
+  position: absolute;
+  left: -10px;
+  top: 10px;
+}
+.layer-chat .list .text .txt p {
+  line-height: 1.5;
+  word-break: break-all;
+}
+.layer-chat .list .text .img img {
+  display: block;
+  max-width: 20%;
 }

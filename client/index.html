@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./static/iconfont/iconfont.css">
   <link rel="stylesheet" href="./static/css/skin.css">
   <script src="./static/js/10.0.1.min.js"></script>
+  <script src="./static/js/socket.io.js"></script>
+  <script src="./static/js/utils.js"></script>
 </head>
 
 <body>
@@ -15,11 +17,9 @@
     <div class="thead">
       <div class="pointer clearfix">
         <dl class="user">
-          <dd class="avatar">
-            <img src="./static/image/avatar.jpg" >
-          </dd>
+          <dd class="avatar" id="userAvatar"></dd>
           <dd class="name">
-            <span>孟小秋</span>
+            <span id="userName">孟小秋</span>
           </dd>
           <dd class="status">
             <span>在线</span>
@@ -38,10 +38,8 @@
         </dd>
       </dl>
     </div>
-    <div class="tbody">
-      <dl class="chat">
-        <dd class="item"></dd>
-      </dl>
+    <div class="tbody" id="lister">
+      <dl class="list"></dl>
     </div>
     <div class="tfoot clearfix">
       <div class="tool">
