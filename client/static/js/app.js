@@ -1,6 +1,6 @@
 (function () {
   chat = {
-    socketUrl: 'ws://192.168.1.153:10000/',
+    socketUrl: 'ws://localhost:10000/',
     input: $('#message'),
     lister: $('#lister'),
     userName: null,

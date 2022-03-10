@@ -24,6 +24,7 @@ io.on('connection', connection = (ws) => {
 	// 消息
 	ws.on('message', (data) => {
 		// 向所有客户端广播发布的消息
+		// io.to(ws.id).emit('message', data)
 		io.emit('message', data)
 	})
 })
