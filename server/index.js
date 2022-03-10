@@ -30,5 +30,5 @@ io.on('connection', connection = (ws) => {
 
 // 创建服务
 server.listen(10000, () => {
-	console.log('服务器启动成功')
+	console.log('服务器启动成功 http://localhost:10000')
 })
